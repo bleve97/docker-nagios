@@ -38,7 +38,7 @@ jobs:
         id: step_two_branches_all
         if: ${{ (startsWith( github.ref, 'refs/heads') == true) && (github.ref != 'refs/heads/master') }}
         run: |
-          echo "action_mytag=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
+          echo "action_mytag=build8-snapshot" >> $GITHUB_ENV
       - name: Set the value of the Docker tag for git tags
         id: step_set_docker_tag_for_git_tags
         if: ${{ startsWith( github.ref, 'refs/tags') == true}}
