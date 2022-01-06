@@ -71,7 +71,7 @@ RUN apk update && \
                         lm-sensors net-snmp-tools \
                         file freeradius-client-dev libdbi-dev libpq linux-headers mariadb-dev \
                         mariadb-connector-c-dev perl \
-                        net-snmp-dev openldap-dev openssl-dev postgresql-dev
+                        net-snmp-dev openldap-dev openssl-dev postgresql-dev gd gd-dev
 
 # Download Nagios core, plugins and nrpe sources                        
 RUN    cd /tmp && \
