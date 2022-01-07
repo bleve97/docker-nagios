@@ -3,6 +3,17 @@
 
 This Docker image contains more than one software (Nagios, Nagios plugins, NRPE, Apache HTTPD, etc.) with different versions. Hence we decided to name the releases with the naming `Build - <number>` which will have an incremental unsigned integer. In this document we will describe the contents of every image in every build.
 
+## Build 9 (2022-01-07)
+
+* Nagios core: v4.4.6
+* Nagios plugins: v2.3.3
+* NRPE: 4.0.3
+
+### Bug Fixes
+
+* Add missing dependencies to build legacy map cgi. ([#36](https://github.com/manios/docker-nagios/issues/36))
+* Add missing `bind-tools` package. ([#37](https://github.com/manios/docker-nagios/issues/37))
+
 ## Build 8 (2021-10-21)
 
 * Nagios core: v4.4.6
