@@ -103,9 +103,9 @@ RUN    ls -l /tmp && cd /tmp && \
        : 'Apply patches to Nagios Core sources:' && \
        echo -n "Replacing \"<sys\/poll.h>\" with \"<poll.h>\": " && \
        sed -i 's/<sys\/poll.h>/<poll.h>/g' ./include/config.h && \
-       echo -n "Patching cgi scripts in order not to throw segmentation fault. For more info please check: https://gitlab.alpinelinux.org/alpine/aports/-/issues/12516" && \
-       wget "https://gitlab.alpinelinux.org/alpine/aports/-/raw/f22889166a9e09b63fbfa1ddc34d3057813931f1/main/nagios/cgi-pairlist-truncation-fix.patch" && \
-       patch cgi/getcgi.c cgi-pairlist-truncation-fix.patch && \
+    #    echo -n "Patching cgi scripts in order not to throw segmentation fault. For more info please check: https://gitlab.alpinelinux.org/alpine/aports/-/issues/12516" && \
+    #    wget "https://gitlab.alpinelinux.org/alpine/aports/-/raw/f22889166a9e09b63fbfa1ddc34d3057813931f1/main/nagios/cgi-pairlist-truncation-fix.patch" && \
+    #    patch cgi/getcgi.c cgi-pairlist-truncation-fix.patch && \
        echo "OK" && \
        echo -e "\n\n ===========================\n Compile Nagios Core\n ===========================\n" && \
        make all && \
